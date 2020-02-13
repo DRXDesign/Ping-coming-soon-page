@@ -30,20 +30,28 @@
       <p>Subscribe and get notified</p>
     </div>
     <!-- Email input -->
-    <div class="subscribe">
-      <input type="email" name="E-mail" id="email" class="email form-control rounded-pill border border-light clearfix"
-        placeholder="You address email...">
-      <input type="button" value="Notify Me" class="button btn btn-primary rounded-pill">
-    </div>
+    <form class="needs-validation" novalidate>
+      <input type="email" name="email" placeholder="Your email ID.." class="email form-control rounded-pill" id="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+      <div class="valid-feedback feedback-pos">
+        Looks good!
+      </div>
+      <div class="invalid-feedback feedback-pos">
+        Please input valid email ID
+      </div>
+      <button type="submit" class="button btn btn-primary rounded-pill" value="validate">Submit</button>
+    </form>
     <!-- Dashboard Illustration -->
     <div class="dashboardimg">
       <img src="images/illustration-dashboard.png" class="img-fluid mx-auto d-block" alt="dashboard">
     </div>
     <!-- Social Icone -->
     <div class="social">
-      <a href="" class="rounded-circle"><i class="fab fa-facebook-f"></i></a>
-      <a href="" class="rounded-circle"><i class="fab fa-twitter"></i></a>
-      <a href="" class="rounded-circle"><i class="fab fa-instagram rounded-circle"></i></a>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      </ul>
     </div>
     <!-- Footer -->
     <footer>
@@ -52,7 +60,7 @@
   </div>
 
   <!-- Optional JavaScript -->
-
+  <script src="js/scripts.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
